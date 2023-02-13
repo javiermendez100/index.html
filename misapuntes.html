@@ -1,0 +1,138 @@
+
+
+  <html>
+         <head>  
+        <title> TAREAS ADMINISTRATIVAS </title>
+        </head>
+        
+                        <body>                 
+ <h1> TAREAS ADMINISTRATIVAS Y SEGURIDAD </h1>
+ <h2> CAMBIO DE CONTRASEÑA </h2>
+ <h4> Cualquier usuario puede cambiar su contraseña usando el comando "passwd", de la siguiente manera: </h4>
+                             <h5> passwd </h5>
+<h4> Tenga en cuenta que el comando no requiere argumentos. </h4>
+<p>  El administrador puede cambiar la contraseña de cualquier usuario. Por ejemplo, suponga que el administrador 
+tiene que cambiar la contraseña de un usuario cuyo login es lisa. Esto se puede lograr escribiendo lo siguiente 
+comando: </p> 
+<h5> passwd lisa </h5>
+ <p> Una cosa interesante es que el sistema operativo obliga a los usuarios habituales a crear contraseñas largas, con un
+                                    mínimo de 5 o 6 caracteres; mientras que el administrador puede crear contraseñas de cualquier longitud. Por
+                                    ejemplo, si un usuario normal intenta crear la contraseña "123", el sistema no lo permitirá; pero el
+                                    administrador podría hacerlo. </p>
+ <h2> CREAR Y BORRAR USUARIOS </h2>
+ <p> Solo los administradores pueden crear y eliminar cuentas. </p>
+<p>     Para crear una cuenta, use el comando "adduser". Por ejemplo, para crear una cuenta cuyo nombre de usuario
+                                        (login) es lisa, usa el comando:
+                                        
+<h5> adduser lisa </h5> 
+                                        
+ <p> Este comando crea automáticamente el directorio de inicio y el grupo del usuario, ambos llamados lisa. Además,
+                                        durante la ejecución del comando, el sistema operativo solicitará la introducción del
+                                        contraseña que se utilizará para ingresar a la cuenta, así como otra información menos relevante como:
+                                        nombre completo del usuario, número de teléfono, etc. </p> 
+        
+        
+                                        
+                                        Por otro lado, para eliminar una cuenta se utiliza el comando “deluser”. Por ejemplo, para eliminar un
+                                        cuenta cuyo nombre de usuario (login) es lisa, use el comando:
+        
+         
+                                                         <h5> deluser lisa </h5>       			 </p>
+        
+<p> Con este comando se elimina el grupo principal de la cuenta, es decir, el grupo lisa. Pero, el directorio de inicio ubicado
+                                   en el directorio de inicio permanece. Para eliminar el directorio de inicio debemos agregar la opción “--remove-home”,
+                                   de la siguiente manera: 
+        
+                                                              <h5> deluser --remove-home lisa </h5>
+        
+        
+        
+                                     En cualquier caso, el administrador siempre puede eliminar el directorio de inicio de la cuenta mediante el comando: </p>
+        
+        
+<h5> rm-r lisa </h5>                    </p>
+ <h2> CREAR Y BORRAR GRUPOS </h2>
+                                
+ <P> Solo los administradores pueden crear y eliminar grupos. </P>
+                               
+ 
+ <P> Para crear un grupo, utilice el comando "groupadd". Por ejemplo, para crear un grupo llamado estudiantes vamos a
+                                   usar el siguiente comando:
+        
+<h5> groupadd estudiantes </h5>
+        
+                                   Por otro lado, para eliminar grupos se utiliza el comando “groupdel”. Por ejemplo, para eliminar al grupo de
+                                   estudiantes usaremos el siguiente comando:
+                                   
+<h5> gruoupdel estudiantes </h5>                                     </P>
+                                
+<h2> AÑADIR O ELIMINAR USUARIOS DEL GRUPO </h2>
+ <p> Solo los administradores pueden agregar y eliminar usuarios de los grupos.
+                                    Para hacer que un usuario pertenezca a varios grupos, además del propio, se utiliza el comando "usermod" con
+                                    las opciones a y G. Por ejemplo, para que la usuaria lisa pertenezca a los grupos de profesores y tutores, la
+                                    Se usarán los siguientes comandos: </p>
+        
+ <p> usermod -aG profesores lisa
+                                       usermod -aG tutores lisa</p>
+         
+<p> Estos dos comandos se pueden reducir a uno separando los nombres de los grupos con comas: </p>
+        
+                                    usermod -aG profesores, tutores lisa
+        
+   <p>  Tenga en cuenta que no hay espacios en blanco entre los nombres de los grupos y la coma de separación.
+                                    Por otro lado, para eliminar un usuario de un grupo el comando "deluser". Por ejemplo, para quitar el
+                                    usuario cuyo inicio de sesión es lisa del grupo de tutores, use el siguiente comando:
+                                        <h5>  deluser tutores lisa </h5>
+</p>
+        
+<h2>  CAMBIAR EL GRUPO DE UN ARCHIVO O DIRECTORIO </h2>
+ <p> Por defecto, un archivo o directorio pertenece al grupo del usuario que lo crea. Para cambiar al grupo de
+                                      el archivo, utilice el comando "chgrp". Por ejemplo, para que el archivo test.txt pertenezca al grupo de profesores,
+                                      usa el comando: </p>
+        
+<p> prueba de maestros chgrp.txt </p>
+        
+<p> Para cambiar el grupo de un directorio y todo su contenido se utiliza la opción R. Por ejemplo: </p>
+        
+         prueba de maestros chgrp -R
+        
+<p>  hace que el directorio de prueba y todo su contenido pertenezcan al grupo de profesores. </p>
+        
+  </body>
+        <html>
+        
+        
+        
+        
+        
+        <html>
+        
+
+
+
+
+
+
+
+
+
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
